@@ -51,7 +51,7 @@ limitations under the License.
 
     <hadoop2.version>2.3.0</hadoop2.version>
 
-    <kite.version>0.12.0</kite.version>
+    <kite.version>0.13.0</kite.version>
   </properties>
 
   <modules>
@@ -69,6 +69,19 @@ limitations under the License.
     <module>flume-ng-tests</module>
     <module>flume-tools</module>
   </modules>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.kitesdk</groupId>
+      <artifactId>kite-morphlines-core</artifactId>
+      <version>${kite.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.kitesdk</groupId>
+      <artifactId>kite-morphlines-json</artifactId>
+      <version>${kite.version}</version>
+    </dependency>
+  </dependencies>
 
   <profiles>
 
@@ -459,6 +472,16 @@ limitations under the License.
   </pluginRepositories>
 
   <repositories>
+
+    <repository>
+      <id>cdh.repo</id>
+      <url>https://repository.cloudera.com/artifactory/cloudera-repos</url>
+      <name>Cloudera Repositories</name>
+        <snapshots>
+          <enabled>true</enabled>
+        </snapshots>
+    </repository>
+
     <repository>
       <id>repo1.maven.org</id>
       <url>http://repo1.maven.org/maven2</url>
